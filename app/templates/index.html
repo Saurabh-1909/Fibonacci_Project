@@ -1,0 +1,27 @@
+{% autoescape on %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Test</title>
+</head>
+<body>
+    <section class="fibonacci-ui">
+        <div class="container">
+            <form method="GET">
+                <input type="search" placeholder="Enter Number For Fibonacci" name="value">
+                <button>Enter</button>
+            </form>
+            <div>
+                <p>Last Element in Fibonacci sequence : {{output}}</p>
+                <br/>
+                <p> Time_taken: {{time_taken}} ms</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+{% endautoescape %}
